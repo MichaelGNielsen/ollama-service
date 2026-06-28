@@ -1,0 +1,19 @@
+[Unit]
+Description=Ollama Service
+After=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/ollama serve
+User=ollama
+Group=ollama
+Restart=always
+RestartSec=3
+Environment="PATH=/home/mgn/.hermes/node/bin:/home/mgn/.opencode/bin:/home/mgn/.local/bin:/home/mgn/.local/bin:/home/mgn/.local/bin:/home/mgn/.local/bin:/usr/local/cuda/bin:/opt/bin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin"
+
+Environment="OLLAMA_HOST=127.0.0.1:11435"
+Environment="OLLAMA_KEEP_ALIVE=-1"
+Environment="OLLAMA_NUM_PARALLEL=8"
+Environment="OLLAMA_MAX_LOADED_MODELS=2"
+
+[Install]
+WantedBy=default.target
