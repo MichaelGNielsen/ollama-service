@@ -1,6 +1,6 @@
-# Ollama Service — Gemma 4 256k
+# Ollama Service — Gemma 4
 
-Lokal Ollama-service der kører Google Gemma 4-modeller (4B, 12B, 26B, 31B) med fuld native kontekst (256K+). Servicen lytter på port **11435** for at undgå kollision med Dockers standard Ollama-port (11434). Kører som systemd-service under brugeren `ollama` med modeller der aldrig afloades (`OLLAMA_KEEP_ALIVE=-1`).
+Lokal Ollama-service der kører Google Gemma 4-modeller (4B, 12B, 26B, 31B) med fuld native kontekst. Servicen lytter på port **11435** for at undgå kollision med Dockers standard Ollama-port (11434). Kører som systemd-service under brugeren `ollama` med modeller der aldrig afloades (`OLLAMA_KEEP_ALIVE=-1`).
 
 ## Dokumentation
 
