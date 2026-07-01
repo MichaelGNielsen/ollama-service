@@ -6,6 +6,19 @@ Denne "service-metode" (systemd) bruges fremfor Docker for at understøtte komma
 
 Kører som systemd-service under brugeren `ollama` med modeller der aldrig afloades (`OLLAMA_KEEP_ALIVE=-1`).
 
+## Installation og opdatering
+
+### Installer Ollama
+Kør følgende kommando for at installere eller opdatere Ollama:
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+### Konfiguration af service
+Denne repo indeholder en optimeret `ollama.service`. Filen `/etc/systemd/system/ollama.service` bør spejle den version, der ligger her i repoen. 
+
+Når du opdaterer Ollama via install-scriptet, kan det overskrive eller ændre standard-servicen. Brug filen her i repoen som reference/diff for at sikre, at dine optimeringer (port 11434, RAM-optimering, etc.) bibeholdes.
+
 ## Dokumentation
 
 - [AGENTS.md](AGENTS.md) — opsætning, scripts og kommandoer
