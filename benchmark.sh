@@ -4,13 +4,13 @@
 #  Ollama Service Benchmark v1.3
 # ==========================================================
 
-OLLAMA_URL="http://127.0.0.1:11435/api/generate"
+OLLAMA_URL="http://127.0.0.1:11434/api/generate"
 
 # Juster eventuelt navnene herunder, så de matcher dit 'ollama list' output præcist
 MODELS=("gemma4" "gemma4:12b" "gemma4:26b" "gemma4:31b")
 
 echo "=========================================================="
-echo " Starting Ollama Service Benchmark on NUC5 (Port 11435)"
+echo " Starting Ollama Service Benchmark on NUC5 (Port 11434)"
 echo "=========================================================="
 printf "%-20s | %-12s | %-15s\n" "Modelnavn" "Status" "Tokens / sek"
 echo "----------------------------------------------------------"

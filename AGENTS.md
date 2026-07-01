@@ -1,10 +1,10 @@
 # Ollama Service — Gemma 4 256k
 
-This repo manages a local Ollama service running Gemma 4 models on port **11435** (avoiding Docker's default 11434). Base models from the Ollama registry are used directly with full native context.
+This repo manages a local Ollama service running Gemma 4 models on port **11434**. Base models from the Ollama registry are used directly with full native context.
 
 ## Port & Environment
 
-- Ollama listens on `127.0.0.1:11435` — always set `OLLAMA_HOST=127.0.0.1:11435` before running any `ollama` command.
+- Ollama listens on `0.0.0.0:11434` — always set `OLLAMA_HOST=0.0.0.0:11434` before running any `ollama` command.
 - The service runs as user `ollama` via systemd (`ollama.service`).
 - Key env vars in the unit: `OLLAMA_KEEP_ALIVE=-1` (models never unload), `OLLAMA_NUM_PARALLEL=8`, `OLLAMA_MAX_LOADED_MODELS=2`.
 
@@ -18,16 +18,16 @@ Base models from the registry: `gemma4`, `gemma4:12b`, `gemma4:26b`, `gemma4:31b
 |---|---|
 | `benchmark.sh` | Token throughput benchmark against all 4 models |
 
-Script targets port 11435.
+Script targets port 11434.
 
 ## Common Commands
 
 ```bash
 # list loaded models
-curl -s http://127.0.0.1:11435/api/tags | grep -o '"name":"[^"]*"'
+curl -s http://127.0.0.1:11434/api/tags | grep -o '"name":"[^"]*"'
 
 # generate (non-streaming)
-curl -X POST http://127.0.0.1:11435/api/generate \
+curl -X POST http://127.0.0.1:11434/api/generate \
   -H "Content-Type: application/json" \
   -d '{"model":"gemma4","prompt":"Hej, svar med ordet test","stream":false}'
 
