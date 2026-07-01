@@ -8,9 +8,7 @@ User=ollama
 Group=ollama
 Restart=always
 RestartSec=3
-Environment="PATH=/home/mgn/.hermes/node/bin:/home/mgn/.opencode/bin:/home/mgn/.local/bin:/home/mgn/.local/bin:/home/mgn/.hermes/node/bin:/home/mgn/.opencode/bin:/home/mgn/.local/bin:/home/mgn/.local/bin:/home/mgn/.local/bin:/home/mgn/.local/bin:/usr/local/cuda/bin:/opt/bin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin"
-
-[Service]
+Environment="PATH=/home/mgn/.hermes/node/bin:/home/mgn/.opencode/bin:/home/mgn/.local/bin:/usr/local/cuda/bin:/opt/bin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 Environment="OLLAMA_HOST=0.0.0.0:11434"
 Environment="OLLAMA_KEEP_ALIVE=-1"
 Environment="OLLAMA_NUM_PARALLEL=8"

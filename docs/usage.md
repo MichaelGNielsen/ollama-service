@@ -20,7 +20,6 @@ qwen3-coder:latest                06c1097efce0    18 GB     4 days ago
 loading_ctf/elona_coder:latest    344d863d53b6    8.9 GB    4 days ago        
 qwen2.5-coder:7b                  dae161e27b0e    4.7 GB    5 days ago        
 gemma4:e4b                        c6eb396dbd59    9.6 GB    5 days ago        
-gemma4:31b-32k                    36f5ca871cd0    19 GB     11 days ago       
 gemma4:12b                        68ddd72d1d96    7.6 GB    12 days ago       
 gemma4:latest                     89b70054091c    9.6 GB    12 days ago       
 qwen2.5-coder:latest              dae161e27b0e    4.7 GB    2 weeks ago
@@ -39,11 +38,11 @@ Ingen modeller loadet i øjeblikket.
 ollama pull gemma4:31b
 
 # list alle modeller
-OLLAMA_HOST=127.0.0.1:11435 ollama list
+OLLAMA_HOST=127.0.0.1:11434 ollama list
 
 # se loadede modeller i GPU
-OLLAMA_HOST=127.0.0.1:11435 ollama ps
+OLLAMA_HOST=127.0.0.1:11434 ollama ps
 
 # kør interaktivt
-OLLAMA_HOST=127.0.0.1:11435 ollama run gemma4:31b
+OLLAMA_HOST=127.0.0.1:11434 ollama run gemma4:31b
 ```

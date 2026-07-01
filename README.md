@@ -1,6 +1,6 @@
 # Ollama Service — Gemma 4
 
-Lokal Ollama-service der kører Google Gemma 4-modeller (4B, 12B, 26B, 31B) med fuld native kontekst. Servicen lytter på port **11435** for at undgå kollision med Dockers standard Ollama-port (11434). Kører som systemd-service under brugeren `ollama` med modeller der aldrig afloades (`OLLAMA_KEEP_ALIVE=-1`).
+Lokal Ollama-service der kører Google Gemma 4-modeller (4B, 12B, 26B, 31B) med fuld native kontekst. Servicen lytter på port **11434**. Kører som systemd-service under brugeren `ollama` med modeller der aldrig afloades (`OLLAMA_KEEP_ALIVE=-1`).
 
 ## Dokumentation
 
@@ -11,10 +11,10 @@ Lokal Ollama-service der kører Google Gemma 4-modeller (4B, 12B, 26B, 31B) med 
 
 ```bash
 # se loadede modeller
-curl -s http://127.0.0.1:11435/api/tags | grep -o '"name":"[^"]*"'
+curl -s http://127.0.0.1:11434/api/tags | grep -o '"name":"[^"]*"'
 
 # curl test
-curl -X POST http://127.0.0.1:11435/api/generate \
+curl -X POST http://127.0.0.1:11434/api/generate \
   -H "Content-Type: application/json" \
   -d '{"model":"gemma4","prompt":"Hej, svar med ordet test","stream":false}'
 
