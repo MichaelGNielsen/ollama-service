@@ -1,6 +1,10 @@
 # Ollama Service — Gemma 4
 
-Lokal Ollama-service der kører Google Gemma 4-modeller (4B, 12B, 26B, 31B) med fuld native kontekst. Servicen lytter på port **11434**. Kører som systemd-service under brugeren `ollama` med modeller der aldrig afloades (`OLLAMA_KEEP_ALIVE=-1`).
+Lokal Ollama-service der kører Google Gemma 4-modeller (4B, 12B, 26B, 31B) med fuld native kontekst. Servicen lytter på port **11434**.
+
+Denne "service-metode" (systemd) bruges fremfor Docker for at understøtte kommandoer som `ollama launch opencode --model glm-5.2:cloud`, som ellers ikke fungerer korrekt via Docker-versionen af Ollama.
+
+Kører som systemd-service under brugeren `ollama` med modeller der aldrig afloades (`OLLAMA_KEEP_ALIVE=-1`).
 
 ## Dokumentation
 
