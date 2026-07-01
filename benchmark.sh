@@ -5,12 +5,19 @@
 # ==========================================================
 
 OLLAMA_URL="http://127.0.0.1:11434/api/generate"
+MODELS_FILE="models.list"
 
-# Juster eventuelt navnene herunder, så de matcher dit 'ollama list' output præcist
-MODELS=("gemma4" "gemma4:12b" "gemma4:26b" "gemma4:31b")
+if [ ! -f "$MODELS_FILE" ]; then
+    echo "Fejl: $MODELS_FILE blev ikke fundet!"
+    exit 1
+fi
+
+# Læs modeller fra filen, fjern tomme linjer og kommentarer
+mapfile -t MODELS < <(grep -v '^#' "$MODELS_FILE" | grep -v '^$')
 
 echo "=========================================================="
 echo " Starting Ollama Service Benchmark on NUC5 (Port 11434)"
+echo " Reading models from: $MODELS_FILE"
 echo "=========================================================="
 printf "%-20s | %-12s | %-15s\n" "Modelnavn" "Status" "Tokens / sek"
 echo "----------------------------------------------------------"

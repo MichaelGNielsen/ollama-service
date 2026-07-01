@@ -1,0 +1,8 @@
+llama3.3:latest
+qwen3.6:latest
+ornith:35b
+# gemma4-modeller er ikke installeret pt
+# gemma4
+# gemma4:12b
+# gemma4:26b
+# gemma4:31b
