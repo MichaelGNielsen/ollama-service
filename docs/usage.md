@@ -14,15 +14,10 @@ gemini-3-flash-preview:cloud      ebade0d31690    -         38 minutes ago
 glm-5.2:cloud                     ce8fd6f94793    -         39 hours ago      
 qwen3.6:latest                    07d35212591f    23 GB     46 hours ago      
 gemma4:31b                        6316f0629137    19 GB     3 days ago        
-llama3.3:latest                   a6eb4748fd29    42 GB     3 days ago        
-gemma4:26b                        5571076f3d70    17 GB     4 days ago        
+llama3.3:latest                   a6eb4748fd29    42 GB     3 days ago              
 qwen3-coder:latest                06c1097efce0    18 GB     4 days ago        
 loading_ctf/elona_coder:latest    344d863d53b6    8.9 GB    4 days ago        
-qwen2.5-coder:7b                  dae161e27b0e    4.7 GB    5 days ago        
-gemma4:e4b                        c6eb396dbd59    9.6 GB    5 days ago        
-gemma4:12b                        68ddd72d1d96    7.6 GB    12 days ago       
 gemma4:latest                     89b70054091c    9.6 GB    12 days ago       
-qwen2.5-coder:latest              dae161e27b0e    4.7 GB    2 weeks ago
 ```
 
 ## Aktuelt loadede modeller
