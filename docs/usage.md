@@ -40,4 +40,15 @@ OLLAMA_HOST=127.0.0.1:11434 ollama ps
 
 # kør interaktivt
 OLLAMA_HOST=127.0.0.1:11434 ollama run gemma4:31b
+
+# check Environment
+systemctl show ollama --property=Environment >ollama.env
+
+...
+# viser 
+OLLAMA_HOST=0.0.0.0:11434 
+OLLAMA_KEEP_ALIVE=-1 
+OLLAMA_NUM_PARALLEL=8 
+OLLAMA_MAX_LOADED_MODELS=2
+
 ```
